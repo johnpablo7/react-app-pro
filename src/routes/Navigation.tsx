@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate } from "react-router-dom";
 import { Routes, Route, NavLink } from "react-router-dom";
+import { ShoppingPage } from "../02-components-patterns/pages/ShoppingPage";
 import logo from "../logo.svg";
 
 export const Navigation = () => {
@@ -14,7 +15,7 @@ export const Navigation = () => {
                 to="/home"
                 className={({ isActive }) => (isActive ? "nav-active" : "")}
               >
-                Home
+                Shopping
               </NavLink>
             </li>
             <li>
@@ -37,7 +38,7 @@ export const Navigation = () => {
         </nav>
 
         <Routes>
-          <Route path="/home" element={<h1>Home Page</h1>} />
+          <Route path="/home" element={<ShoppingPage />} />
           <Route path="about" element={<h1>About Page</h1>} />
           <Route path="users" element={<h1>Users Page</h1>} />
 
